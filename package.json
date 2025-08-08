@@ -8,12 +8,17 @@
   "version": "1.0.0",
   "author": "ross",
   "scripts": {
-    "start": "electron .",
-    "test:playwright": "node test-electron.mjs"
+    "start:main": "electron .",
+    "start:bootstrap": "electron bootstrap.js",
+    "test:main": "ELECTRON_ENTRY=main node test.mjs",
+    "test:bootstrap": "ELECTRON_ENTRY=bootstrap node test.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.2",
     "electron": "37.2.5",
     "playwright": "^1.54.2"
+  },
+  "dependencies": {
+    "coreimage-raw-convert": "3.0.1"
   }
 }
