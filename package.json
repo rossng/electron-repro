@@ -4,13 +4,16 @@
   "description": "My Electron application description",
   "keywords": [],
   "main": "./main.js",
+  "type": "module",
   "version": "1.0.0",
   "author": "ross",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "test:playwright": "node test-electron.mjs"
   },
-  "dependencies": {},
   "devDependencies": {
-    "electron": "37.2.5"
+    "@playwright/test": "^1.54.2",
+    "electron": "37.2.5",
+    "playwright": "^1.54.2"
   }
 }
